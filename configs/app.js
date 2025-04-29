@@ -25,7 +25,7 @@ const configs = (app)=>{
 
 const routes = (app)=>{
     app.use(authRoutes)
-    app.use('/v1/user', userRoutes)
+    app.use('/user', userRoutes)
 }
 
 export const initServer = ()=>{
