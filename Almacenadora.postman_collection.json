@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "f378d0c0-1bf1-4656-9d8c-fbf6c3e5f49b",
+		"name": "Almacenadora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956970"
+	},
+	"item": [
+		{
+			"name": "CRUDCliente",
+			"item": [
+				{
+					"name": "GetClients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "<token>",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/clients/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"clients",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/clients/681062ad54ad4a7184d50d34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"clients",
+								"681062ad54ad4a7184d50d34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Distribuidora Alfa\",\r\n    \"email\": \"alfa@distribuidora.com\",\r\n    \"phone\": \"2233-4455\",\r\n    \"address\": \"Zona 1, Ciudad de Guatemala\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/clients/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"clients",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutClient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Distribuidora Alfa\",\r\n    \"email\": \"alfa@distribuidora.com\",\r\n    \"phone\": \"1234-4455\",\r\n    \"address\": \"Zona 12, Ciudad de Guatemala\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/clients/681062ad54ad4a7184d50d34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"clients",
+								"681062ad54ad4a7184d50d34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteClient",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/clients/681062ad54ad4a7184d50d34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"clients",
+								"681062ad54ad4a7184d50d34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDUser",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "userLoggin",
+								"value": "1dylan",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123123Aa!",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDSupplier",
+			"item": [
+				{
+					"name": "GetSuppliers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2636/v1/suppliers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"suppliers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSupplierById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2636/v1/suppliers/681064659e6fb859ab8cda34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"suppliers",
+								"681064659e6fb859ab8cda34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostSupplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Proveedor A\",\r\n    \"description\": \"Proveedor de productos electrónicos.\",\r\n    \"address\": \"Calle 1, Zona 10, Ciudad de Guatemala\",\r\n    \"email\": \"proveedora@a.com\",\r\n    \"phone\": \"+502 1234 5678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/suppliers/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"suppliers",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutSupplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Proveedor A\",\r\n    \"description\": \"Proveedor de productos electrónicos.\",\r\n    \"address\": \"Calle 1, Zona 10, Ciudad de Guatemala\",\r\n    \"email\": \"proveedora@A.com\",\r\n    \"phone\": \"+502 3694 5678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/suppliers/681064659e6fb859ab8cda34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"suppliers",
+								"681064659e6fb859ab8cda34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSupplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2636/v1/suppliers/681064659e6fb859ab8cda34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"suppliers",
+								"681064659e6fb859ab8cda34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
