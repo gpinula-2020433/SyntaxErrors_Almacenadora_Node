@@ -11,6 +11,8 @@ import helmet from 'helmet'//seguridad para HTTP
 import cors from 'cors'//acceso al Api
 import userRoutes from '../src/user/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
+import clientRoutes from '../src/clients/client.routes.js'
+import supplierRoutes from '../src/suppliers/supplier.routes.js'
 import { limiter } from '../middlewares/rate.limit.js'
 
 //Configuraciones de express
@@ -23,9 +25,11 @@ const configs = (app)=>{
     app.use(limiter)
 }
 
-const routes = (app)=>{
-    app.use(authRoutes)
+const routes = (app) => {
+    app.use(authRoutes);
     app.use('/v1/user', userRoutes)
+    app.use('/v1/clients', clientRoutes)
+    app.use('/v1/suppliers', supplierRoutes)
 }
 
 export const initServer = ()=>{
