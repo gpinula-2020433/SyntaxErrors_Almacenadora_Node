@@ -1,58 +1,54 @@
-//Modelo de usuario
- 
-import {Schema, model} from 'mongoose'
- 
+import { Schema, model } from "mongoose";
+
 const userSchema = Schema(
     {
-        name: {
+        name:{
             type: String,
-            required: [true, 'Name is required'],
-            maxLength:[25, `Can't be overcame 25 characters`]
- 
+            required:[true, 'Name is required'],
+            maxLength: [25, `Can't be overcome 25 characters`]
         },
-        surname: {
+        surname:{
             type: String,
-            required: [true, 'Surname is required'],
-            maxLength: [25, `can't be overcame 25 characters`]
+            required:[true, 'Surname is required'],
+            maxLength: [25, `Can't be overcome 25 characters`]
         },
-        username: {
+        username:{
             type: String,
-            unique: [true, 'Username is alredy taken'],
+            required:[true, 'Surname is required'],
+            unique : [true, 'Username is alredy taken'],
             lowercase: true,
-            maxLength: [15, `can't be overcame 25 characters`]
+            maxLength: [15, `Can't be overcome 15 characters`]
         },
-        email: {
+        email:{
             type: String,
             required: [true, 'Email is required'],
+            unique: true
         },
-        password: {
-            type: String,
+        password:{
+            type:String,
             required: [true, 'Password is required'],
             minLength: [8, 'Password must be 8 characters'],
-            maxLength: [100, `can't be overcame 16 characters`],
+            maxLength: [100, `Can't be overcome 100 characters`],
         },
-        profilePicture: {
-            type: String
-        },
-        phone: {
+
+        phone:{
             type: String,
-            required: [true, 'Phone is required'],
-            minLength: [8,`can't be overcame 16 characters`],
-            maxLength: [13, 'Phone must be 13 numbers'],
- 
+            required:  [true, 'Phone is required'],
+            minLength: [8, `Can't be overcome 16 characters`],
+            maxLength: [15, 'Phone number must be 13 numbers'],
         },
-        role: {
+        role:{
             type: String,
             required: [true, 'Role is required'],
             uppercase: true,
-            enum: ['TEACHER_ROLE', 'STUDENT_ROLE']
+            enum: ['ADMIN', 'CLIENT']
         }
     }
 )
 
-//Excluis datos en la respuesta
 userSchema.methods.toJSON = function(){
-    const { __v, password, ...user } = this.toObject()
+    const {__v, password, ...user} = this.toObject()
     return user
 }
-export default model('User', userSchema)
+
+export default model ('User', userSchema)
