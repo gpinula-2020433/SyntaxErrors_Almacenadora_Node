@@ -65,7 +65,6 @@ export const defaultAdmin = async (nameA, surnameA, usernameA, emailA, passwordA
 }
 
 defaultAdmin('Dylan ', 'Julian', '1dylan', 'djulian@gmail.com', '123123Aa!', '123123123', 'ADMIN')
-defaultAdmin('Nose ', 'Nose', 'user', 'djulian@gmail.com', '123123Aa!', '123123123', 'ADMIN')
 
 
 export const changeRole = async(req, res)=>{
