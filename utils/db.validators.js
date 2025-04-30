@@ -1,5 +1,3 @@
-//Validar datos relacionados a la BD
-
 import User from '../src/user/user.model.js'
 
 export const existUsername = async(username, user)=>{

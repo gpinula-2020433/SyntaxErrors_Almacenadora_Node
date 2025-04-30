@@ -1,5 +1,3 @@
-//Validar campos en las rutas
-
 import { body } from "express-validator";
 import { validateErrors, validateErrorsWithoutFiles } from "./validate.errors.js";
 import { existEmail, existUsername, notRequiredField } from "../utils/db.validators.js";

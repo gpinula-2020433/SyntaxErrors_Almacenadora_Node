@@ -1,4 +1,3 @@
-//Eliminar archicos si algo sale mal
 import { unlink } from 'fs/promises';
 import { join } from 'path';
 

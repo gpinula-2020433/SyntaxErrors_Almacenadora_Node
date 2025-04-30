@@ -1,4 +1,3 @@
-//Validar los tokens
 'use strict'
 
 import jwt from 'jsonwebtoken'
