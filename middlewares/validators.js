@@ -4,7 +4,7 @@ import { body } from "express-validator";
 import { validateErrors, validateErrorsWithoutFiles } from "./validate.errors.js";
 import { existEmail, existUsername, notRequiredField } from "../utils/db.validators.js";
 
-export const registerValidator = [
+export const registerValidation = [
     body('name', 'Name cannot be empty')
         .notEmpty(),
     body('surname', 'Surname cannot be empty')
