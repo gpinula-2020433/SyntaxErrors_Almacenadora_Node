@@ -1,5 +1,7 @@
 import Product from './product.model.js'
+import Category from '../category/category.model.js'
 
+//Función para registrar un product
 export const save = async(req, res) => {
     const data = req.body
     try {
