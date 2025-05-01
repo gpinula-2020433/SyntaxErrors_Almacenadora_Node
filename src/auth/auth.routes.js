@@ -14,6 +14,6 @@ api.post(
 )
 
 api.post('/login', login)
-api.get('/test', validateJwt,test)
+api.get('/test', test)
 
 export default api

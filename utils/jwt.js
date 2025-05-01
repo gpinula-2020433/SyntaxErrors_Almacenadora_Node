@@ -2,7 +2,6 @@
 
 import jwt from "jsonwebtoken"
 
-//Generar un nuevo token
 export const generateJwt = async(payload)=>{
     try {
         return jwt.sign(

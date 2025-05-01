@@ -1,21 +1,16 @@
-//Levantar el servidor
-
-//Modular efectivo legible trabaja en funciones
-
 'use strict'
 
-//ECModules
-import express from 'express'//servidor HTTP
-import morgan from 'morgan'//logs
-import helmet from 'helmet'//seguridad para HTTP
-import cors from 'cors'//acceso al Api
+import express from 'express'
+import morgan from 'morgan'
+import helmet from 'helmet'
+import cors from 'cors'
 import userRoutes from '../src/user/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
-import clientRoutes from '../src/clients/client.routes.js'
-import supplierRoutes from '../src/suppliers/supplier.routes.js'
+import categoryRoutes from '../src/category/category.routes.js'
+import productRoutes from '../src/product/product.routes.js'
 import { limiter } from '../middlewares/rate.limit.js'
+import { addDefaultCategory } from '../src/category/category.controller.js'
 
-//Configuraciones de express
 const configs = (app)=>{
     app.use(express.json())
     app.use(express.urlencoded({extended: false}))
@@ -25,20 +20,21 @@ const configs = (app)=>{
     app.use(limiter)
 }
 
-const routes = (app) => {
-    app.use(authRoutes);
+const routes = (app)=>{
+    app.use(authRoutes)
     app.use('/v1/user', userRoutes)
-    app.use('/v1/clients', clientRoutes)
-    app.use('/v1/suppliers', supplierRoutes)
+    app.use('/v1/product', productRoutes)
+    app.use('/v1/category', categoryRoutes)
 }
 
 export const initServer = ()=>{
-    const app = express() //Instancia de express
+    const app = express()
     try{
         configs(app)
         routes(app)
         app.listen(process.env.PORT)
         console.log(`Server running in port ${process.env.PORT}`)
+        addDefaultCategory()
     }catch(err){
         console.error('Server init failed', err)
     }

@@ -1,5 +1,3 @@
-//Validar campos en las rutas
-
 import { body } from "express-validator";
 import { validateErrors, validateErrorsWithoutFiles } from "./validate.errors.js";
 import { existEmail, existUsername, notRequiredField } from "../utils/db.validators.js";
@@ -57,3 +55,19 @@ export const updateUserValidator = [
         .custom(notRequiredField),
     validateErrorsWithoutFiles 
 ]
+
+export const registerCategory =[
+
+]
+
+export const updateCategory = [
+
+]
+export const registerProduct = [
+
+]
+
+export const updateProduct = [
+    
+]
+
