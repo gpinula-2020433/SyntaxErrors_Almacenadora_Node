@@ -6,13 +6,14 @@ import {
     updateSupplier,
     deleteSupplier
 } from './supplier.controller.js'
+import { validateJwt, isAdmin } from '../../middlewares/validate.jwt.js';
 
 const router = Router()
 
-router.get('/', getAllSuppliers)
-router.get('/:id', getSupplierByID)
-router.post('/add', createSupplier)
-router.put('/:id', updateSupplier)
-router.delete('/:id', deleteSupplier)
+router.get('/', [validateJwt], getAllSuppliers)
+router.get('/:id', [validateJwt], getSupplierByID)
+router.post('/add', [validateJwt], createSupplier)
+router.put('/:id', [validateJwt], updateSupplier)
+router.delete('/:id', [validateJwt], deleteSupplier)
 
 export default router;

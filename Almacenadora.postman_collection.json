@@ -16,18 +16,17 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "<token>",
-								"type": "text",
-								"disabled": true
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:2636/v1/clients/",
+							"raw": "http://localhost:3200/v1/clients/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"clients",
@@ -44,17 +43,17 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:2636/v1/clients/681062ad54ad4a7184d50d34",
+							"raw": "http://localhost:3200/v1/clients/681062ad54ad4a7184d50d34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"clients",
@@ -70,10 +69,9 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "",
-								"value": "",
-								"type": "text",
-								"disabled": true
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -86,12 +84,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/clients/add",
+							"raw": "http://localhost:3200/v1/clients/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"clients",
@@ -107,10 +105,9 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "",
-								"value": "",
-								"type": "text",
-								"disabled": true
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -123,12 +120,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/clients/681062ad54ad4a7184d50d34",
+							"raw": "http://localhost:3200/v1/clients/681062ad54ad4a7184d50d34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"clients",
@@ -144,19 +141,18 @@
 						"method": "DELETE",
 						"header": [
 							{
-								"key": "",
-								"value": "",
-								"type": "text",
-								"disabled": true
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:2636/v1/clients/681062ad54ad4a7184d50d34",
+							"raw": "http://localhost:3200/v1/clients/681062ad54ad4a7184d50d34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"clients",
@@ -172,30 +168,191 @@
 			"name": "CRUDUser",
 			"item": [
 				{
-					"name": "Login",
+					"name": "Get User",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
-								"key": "userLoggin",
-								"value": "1dylan",
-								"type": "text"
-							},
-							{
-								"key": "password",
-								"value": "123123Aa!",
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNTQ0OWY3NDFhMWM3N2FlYWQxYmUiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDU5MDEzNTQsImV4cCI6MTc0NTkxMjE1NH0.AzRhTBN6ufPPB63qWABCNGk2lX0i8_w-__JOfiwkHlM",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:2636/auth/login",
-							"protocol": "http",
+							"raw": "localhost:3200/test",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
-								"auth",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Gabriel",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Pinula",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "1pinula",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gpinula@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pinula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/user/updateUser/68105ebe6076400557d4c91d",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"updateUser",
+								"68105ebe6076400557d4c91d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3200/user/deleteUser/68105ebe6076400557d4c91d",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"deleteUser",
+								"68105ebe6076400557d4c91d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "1dylan",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
 								"login"
 							]
 						}
@@ -211,14 +368,20 @@
 					"name": "GetSuppliers",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:2636/v1/suppliers/",
+							"raw": "http://localhost:3200/v1/suppliers/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"suppliers",
@@ -232,14 +395,20 @@
 					"name": "GetSupplierById",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:2636/v1/suppliers/681064659e6fb859ab8cda34",
+							"raw": "http://localhost:3200/v1/suppliers/681064659e6fb859ab8cda34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"suppliers",
@@ -253,7 +422,13 @@
 					"name": "PostSupplier",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Proveedor A\",\r\n    \"description\": \"Proveedor de productos electrónicos.\",\r\n    \"address\": \"Calle 1, Zona 10, Ciudad de Guatemala\",\r\n    \"email\": \"proveedora@a.com\",\r\n    \"phone\": \"+502 1234 5678\"\r\n}\r\n",
@@ -264,12 +439,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/suppliers/add",
+							"raw": "http://localhost:3200/v1/suppliers/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"suppliers",
@@ -283,7 +458,13 @@
 					"name": "PutSupplier",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Proveedor A\",\r\n    \"description\": \"Proveedor de productos electrónicos.\",\r\n    \"address\": \"Calle 1, Zona 10, Ciudad de Guatemala\",\r\n    \"email\": \"proveedora@A.com\",\r\n    \"phone\": \"+502 3694 5678\"\r\n}\r\n",
@@ -294,12 +475,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/suppliers/681064659e6fb859ab8cda34",
+							"raw": "http://localhost:3200/v1/suppliers/681064659e6fb859ab8cda34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"suppliers",
@@ -313,14 +494,20 @@
 					"name": "DeleteSupplier",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEyZjExN2ZmMDQ4NGU4ZjBlZjYzZDkiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDYwNzI3NzMsImV4cCI6MTc0NjA4MzU3M30.4ryx8e_UZ0gL3M16IdHO_k--AXCDT4ZIDN-q7fjVs4o",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:2636/v1/suppliers/681064659e6fb859ab8cda34",
+							"raw": "http://localhost:3200/v1/suppliers/681064659e6fb859ab8cda34",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "3200",
 							"path": [
 								"v1",
 								"suppliers",

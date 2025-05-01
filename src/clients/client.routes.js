@@ -10,10 +10,10 @@ import { validateJwt } from "../../middlewares/validate.jwt.js"
 
 const router = Router()
 
-router.get('/', getAllClients)
-router.get('/:id', getClientById)
-router.post('/add', createClient)
-router.put('/:id', updateClient)
-router.delete('/:id', deleteClient)
+router.get('/', [validateJwt], getAllClients)
+router.get('/:id', [validateJwt], getClientById)
+router.post('/add', [validateJwt], createClient)
+router.put('/:id', [validateJwt], updateClient)
+router.delete('/:id', [validateJwt], deleteClient)
 
 export default router;
