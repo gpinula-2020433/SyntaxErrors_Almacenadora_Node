@@ -55,3 +55,19 @@ export const updateUserValidator = [
         .custom(notRequiredField),
     validateErrorsWithoutFiles 
 ]
+
+export const registerCategory =[
+
+]
+
+export const updateCategory = [
+
+]
+export const registerProduct = [
+
+]
+
+export const updateProduct = [
+    
+]
+
