@@ -1,6 +1,8 @@
 import User from '../src/user/user.model.js'
 import Product from '../src/product/product.model.js'
 import Category from '../src/category/category.model.js'
+import Supplier from '../src/suppliers/supplier.model.js'
+import Client from '../src/clients/client.model.js'
 
 export const existUsername = async(username, user)=>{
     const alreadyUsername = await User.findOne({username})
@@ -56,5 +58,21 @@ export const existNameCategory = async(nameCategory)=>{
     if(alreadyNameCategory){
         console.error(`The Category | ${nameCategory} | already exists`)
         throw new Error(`The Category | ${nameCategory} | already exists`)
+    }
+}
+
+// Validar que no exista el email del proveedor
+export const existEmailSupplier = async (email, user = {}) => {
+    const supplier = await Supplier.findOne({ email });
+    if (supplier && (!user.uid || supplier._id != user.uid)) {
+        throw new Error(`Email ${email} is already registered for a supplier`);
+    }
+}
+
+// Validar que no exista el email del cliente
+export const existEmailClient = async (email, user = {}) => {
+    const client = await Client.findOne({ email });
+    if (client && (!user.uid || client._id != user.uid)) {
+        throw new Error(`Email ${email} is already registered for a client`);
     }
 }
