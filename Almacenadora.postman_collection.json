@@ -1,13 +1,665 @@
 {
 	"info": {
-		"_postman_id": "f378d0c0-1bf1-4656-9d8c-fbf6c3e5f49b",
+		"_postman_id": "a3b036e5-f6fe-42d3-b894-d0e87e3e8b92",
 		"name": "Almacenadora",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37956970"
+		"_exporter_id": "37956966"
 	},
 	"item": [
 		{
-			"name": "CRUDCliente",
+			"name": "CRUD_User",
+			"item": [
+				{
+					"name": "LoginAdmin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "1dylan",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginCliente 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "1pinula",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginCliente 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "1pamal",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterCliente 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Gabriel",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Pinula",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "1pinula",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gpinula@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterCliente 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Marcos",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Pamal",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "1pamal",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mpamal@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pinula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/user/updateClient/681306d2ed32b821aaaf32f4",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"user",
+								"updateClient",
+								"681306d2ed32b821aaaf32f4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAdmin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pinula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/user/updateAdmin/6813071819353ccc52ef317c",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"user",
+								"updateAdmin",
+								"6813071819353ccc52ef317c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3200/v1/user/deleteClient/681306d2ed32b821aaaf32f4",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"user",
+								"deleteClient",
+								"681306d2ed32b821aaaf32f4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3200/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNTQ0OWY3NDFhMWM3N2FlYWQxYmUiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDU5MDEzNTQsImV4cCI6MTc0NTkxMjE1NH0.AzRhTBN6ufPPB63qWABCNGk2lX0i8_w-__JOfiwkHlM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3200/test",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAdmin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pinula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/user/updateAdmin/6813071819353ccc52ef317c",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"user",
+								"updateAdmin",
+								"6813071819353ccc52ef317c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD_Category",
+			"item": [
+				{
+					"name": "getCategorys",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/v1/category/",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Dispositivos tecnológicos",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Dispositivos para todas las edades",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Elementos de limpieza",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Herramientas para limpieza del hogar",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/category/",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Productos_Limpieza",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Prud. de Platos",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/category/67c6590abb381f6c81d4aea5",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"category",
+								"67c6590abb381f6c81d4aea5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3200/v1/category/67b2a8446b9ed5cb7230f3ab",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"category",
+								"67b2a8446b9ed5cb7230f3ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/v1/category/67c65fec15513aeb2a50a5ee",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"category",
+								"67c65fec15513aeb2a50a5ee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD_Cliente",
 			"item": [
 				{
 					"name": "GetClients",
@@ -165,204 +817,7 @@
 			]
 		},
 		{
-			"name": "CRUDUser",
-			"item": [
-				{
-					"name": "Get User",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNTQ0OWY3NDFhMWM3N2FlYWQxYmUiLCJ1c2VybmFtZSI6IjFkeWxhbiIsIm5hbWUiOiJEeWxhbiAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDU5MDEzNTQsImV4cCI6MTc0NTkxMjE1NH0.AzRhTBN6ufPPB63qWABCNGk2lX0i8_w-__JOfiwkHlM",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "localhost:3200/test",
-							"host": [
-								"localhost"
-							],
-							"port": "3200",
-							"path": [
-								"test"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Register",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "name",
-									"value": "Gabriel",
-									"type": "text"
-								},
-								{
-									"key": "surname",
-									"value": "Pinula",
-									"type": "text"
-								},
-								{
-									"key": "username",
-									"value": "1pinula",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "gpinula@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123123Aa!",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "123123123",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3200/register",
-							"host": [
-								"localhost"
-							],
-							"port": "3200",
-							"path": [
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "UpdateUser",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "name",
-									"value": "Pinula",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3200/user/updateUser/68105ebe6076400557d4c91d",
-							"host": [
-								"localhost"
-							],
-							"port": "3200",
-							"path": [
-								"user",
-								"updateUser",
-								"68105ebe6076400557d4c91d"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DeleteUser",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "localhost:3200/user/deleteUser/68105ebe6076400557d4c91d",
-							"host": [
-								"localhost"
-							],
-							"port": "3200",
-							"path": [
-								"user",
-								"deleteUser",
-								"68105ebe6076400557d4c91d"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Login",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var data = JSON.parse(responseBody);\r",
-									"postman.setGlobalVariable(\"token\", data.token)"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "userLoggin",
-									"value": "1dylan",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123123Aa!",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3200/login",
-							"host": [
-								"localhost"
-							],
-							"port": "3200",
-							"path": [
-								"login"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "CRUDSupplier",
+			"name": "CRUD_Supplier",
 			"item": [
 				{
 					"name": "GetSuppliers",
@@ -512,6 +967,515 @@
 								"v1",
 								"suppliers",
 								"681064659e6fb859ab8cda34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD_Product",
+			"item": [
+				{
+					"name": "getProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/v1/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "PC de escritorio",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "DELL",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "8 de ram, I9 de septima generación",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "SKU",
+									"value": "pc021ac1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "681438f5f957e831957b8c09",
+									"type": "text"
+								},
+								{
+									"key": "-----",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Zagaz arranca grasas",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "brand",
+									"value": "Zagaz",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Zagaz limpieza arranca grasa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "stock",
+									"value": "20",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "SKU",
+									"value": "lava0001",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "67c687c4020035adb6c0e921",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "The monster la pc más potente",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "brand",
+									"value": "DELL",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Computadora de escritorio con I5 de 11ma generación",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "20",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "stock",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "SKU",
+									"value": "12escritoriopc",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "67c65901bb381f6c81d4aea0",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/product/67c68804020035adb6c0e92a",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"product",
+								"67c68804020035adb6c0e92a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3200/v1/product/67c6624215513aeb2a50a63b",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"product",
+								"67c6624215513aeb2a50a63b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3200/v1/product/67c65acfbb381f6c81d4aec9",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"product",
+								"67c65acfbb381f6c81d4aec9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD_Control",
+			"item": [
+				{
+					"name": "addControl",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "ENTRANCE",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2025-05-1",
+									"type": "text"
+								},
+								{
+									"key": "employee",
+									"value": "Juanito",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "Envío a cliente",
+									"type": "text"
+								},
+								{
+									"key": "destination",
+									"value": "Sucursal zona 10",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "68143906f957e831957b8c1a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/control/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"control",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllControls",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3200/v1/control/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"control",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getControlsID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3200/v1/control/68143938f957e831957b8c22",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"control",
+								"68143938f957e831957b8c22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getControlType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3200/v1/control/type/entrance",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"control",
+								"type",
+								"entrance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateControl",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "EXIT",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2025-05-1",
+									"type": "text"
+								},
+								{
+									"key": "employee",
+									"value": "Juanito",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "Correccion de pedido",
+									"type": "text"
+								},
+								{
+									"key": "destination",
+									"value": "Sucursal zona 10",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "68143906f957e831957b8c1a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/v1/control/update/68143938f957e831957b8c22",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"control",
+								"update",
+								"68143938f957e831957b8c22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteControl",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3200/v1/control/delete/68143956f957e831957b8c26",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"v1",
+								"control",
+								"delete",
+								"68143956f957e831957b8c26"
 							]
 						}
 					},

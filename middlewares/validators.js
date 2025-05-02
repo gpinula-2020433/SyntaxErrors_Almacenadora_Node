@@ -9,9 +9,10 @@ import {
   notRequiredField,
   existEmailSupplier,
   existEmailClient,
+  productExists,
 } from "../utils/db.validators.js";
 
-// ✅ VALIDACIÓN REGISTRO USUARIO
+//VALIDACIÓN REGISTRO USUARIO
 export const registerValidation = [
   body("name", "Name cannot be empty").notEmpty(),
   body("surname", "Surname cannot be empty").notEmpty(),
@@ -33,7 +34,7 @@ export const registerValidation = [
   validateErrors,
 ];
 
-// ✅ VALIDACIÓN ACTUALIZACIÓN USUARIO
+//VALIDACIÓN ACTUALIZACIÓN USUARIO
 export const updateUserValidator = [
   body("username", "Username cannot be empty")
     .notEmpty()
@@ -54,7 +55,7 @@ export const updateUserValidator = [
   validateErrorsWithoutFiles,
 ];
 
-// ✅ VALIDACIONES CATEGORÍA
+// VALIDACIONES CATEGORÍA
 export const registerCategory = [
   body("nameCategory", "Category name cannot be empty").notEmpty(),
   validateErrors,
@@ -65,7 +66,7 @@ export const updateCategory = [
   validateErrors,
 ];
 
-// ✅ VALIDACIONES PRODUCTO
+// VALIDACIONES PRODUCTO
 export const registerProduct = [
   body("nameProduct", "Product name cannot be empty").notEmpty(),
   body("price", "Price must be a valid number").notEmpty().isNumeric(),
@@ -82,7 +83,7 @@ export const updateProduct = [
   validateErrors,
 ];
 
-// ✅ VALIDACIONES PROVEEDOR
+// VALIDACIONES PROVEEDOR
 export const registerSupplier = [
   body("name", "Name cannot be empty").notEmpty(),
   body("description", "Description cannot be empty").notEmpty(),
@@ -111,7 +112,7 @@ export const updateSupplier = [
   validateErrors,
 ];
 
-// ✅ VALIDACIONES CLIENTE
+//  VALIDACIONES CLIENTE
 export const registerClientValidator = [
   body("name", "Name cannot be empty").notEmpty(),
   body("address", "Address cannot be empty").notEmpty(),
@@ -137,3 +138,31 @@ export const updateClientValidator = [
     .isMobilePhone(),
   validateErrors,
 ];
+
+// Validaciones Control
+export const registerControl = [
+  body('type', 'Type is required')
+      .notEmpty()
+      .isIn(['ENTRANCE', 'EXIT'])
+      .withMessage('Type must be ENTRANCE or EXIT'),
+  body('quantity', 'Quantity is required')
+      .notEmpty()
+      .isInt({ gt: 0 })
+      .withMessage('Quantity must be a positive integer'),
+  body('date', 'Date is required')
+      .notEmpty()
+      .isISO8601()
+      .withMessage('Date must be in ISO8601 format'),
+  body('employee', 'Employee is required')
+      .notEmpty(),
+  body('product', 'Product ID is required')
+      .notEmpty()
+      .custom(productExists),
+  body('reason')
+      .optional()
+      .isString(),
+  body('destination')
+      .optional()
+      .isString(),
+  validateErrors
+]

@@ -2,13 +2,9 @@ import { Schema, model } from "mongoose";
 
 const controlSchema = new Schema(
     {
-        product: {
-            type: String,
-            required: [true, 'Product name is required']
-        },
         type: {
             type: String,
-            enum: ['entrance', 'exit'],
+            enum: ['ENTRANCE', 'EXIT'],
             required: [true, 'Type is required']
         },
         quantity: {
@@ -30,12 +26,17 @@ const controlSchema = new Schema(
         destination: {
             type: String,
             required: [false, 'Destination is not mandatoryd']
+        },
+        product:{
+            type: Schema.Types.ObjectId,
+            ref: 'Product',
+            required: [true, 'Product is required']
         }
     },
     {
         timestamps: true,
         versionKey: false
     }
-);
+)
 
 export default model('Control', controlSchema)

@@ -7,13 +7,14 @@ import {
     updateControl,
     deleteControl
 } from './control.controller.js'
+import { validateErrors } from '../../middlewares/validate.errors.js';
 
 const api = Router()
 
-api.post('/add', addControl)
+api.post('/add', [validateErrors], addControl)
 api.get('/getAll', getAllControl)
-api.get('/byId/:id', getControltById)
-api.get('/type/:type', getControlByType);
+api.get('/:id', getControltById)
+api.get('/type/:type', getControlByType)
 api.put('/update/:id', updateControl)
 api.delete('/delete/:id', deleteControl)
 

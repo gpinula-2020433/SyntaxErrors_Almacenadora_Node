@@ -199,7 +199,7 @@ export const updateUsuarioAdmin = async(req, res)=>{
             return res.send(
                 {
                     success: false,
-                    message: `No se puede actualizar a otro admin | ${usuarioAActualizar.name}`
+                    message: `No se puede actualizar a otro admin`
                 }
             )
         }

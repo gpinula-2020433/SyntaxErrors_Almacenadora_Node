@@ -76,3 +76,15 @@ export const existEmailClient = async (email, user = {}) => {
         throw new Error(`Email ${email} is already registered for a client`);
     }
 }
+
+//Validar que la llave foranea sea de un producto y no de otra categoria
+export const productExists = async (productId) => {
+    if (!isValidObjectId(productId)) {
+        throw new Error('Invalid ObjectId format')
+    }
+
+    const product = await Product.findById(productId)
+    if (!product) {
+        throw new Error('Product does not exist')
+    }
+}
