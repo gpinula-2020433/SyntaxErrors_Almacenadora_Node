@@ -230,16 +230,13 @@ export const updateUsuarioAdmin = async(req, res)=>{
                 user: update
             }
         )
-    }catch(err){
-        console.error('General error', err)
-        return res.status(500).send(
-            {
-                success: false,
-                message: 'General error',
-                err
-            }
-        )
-    }
+    } catch (error) {
+        if (error.name === 'ValidationError') {
+            const errors = Object.values(error.errors).map(err => ({ msg: err.message }))
+            return res.status(400).send({ message: 'Validation errors', errors })
+        }
+        return res.status(500).send({message: 'General error with user registration', error})
+    }    
 }
 
 export const deleteClient = async(req,res)=>{

@@ -10,6 +10,7 @@ import {
   existEmailSupplier,
   existEmailClient,
   productExists,
+  existNameCategory,
 } from "../utils/db.validators.js";
 
 //VALIDACIÓN REGISTRO USUARIO
@@ -30,7 +31,6 @@ export const registerValidation = [
     .withMessage("Password must be strong")
     .isLength({ min: 8 })
     .withMessage("Password needs min characters"),
-  body("phone", "Phone cannot be empty").notEmpty().isMobilePhone(),
   validateErrors,
 ];
 
@@ -57,12 +57,26 @@ export const updateUserValidator = [
 
 // VALIDACIONES CATEGORÍA
 export const registerCategory = [
-  body("nameCategory", "Category name cannot be empty").notEmpty(),
+  body("name", "Category name cannot be empty")
+    .notEmpty(),
+//    .custom(existNameCategory),
+  body("description", "Category name cannot be empty")
+    .notEmpty(),
+  body("status", "Category name cannot be empty")
+    .optional(),
   validateErrors,
 ];
 
-export const updateCategory = [
-  body("nameCategory", "Category name cannot be empty").notEmpty(),
+export const updateCategoryValidator = [
+  body("nameCategory", "Category name cannot be empty")
+    .optional()
+    .notEmpty(),
+  body("description", "Category cannot be empty")
+    .optional()
+    .notEmpty(),
+  body("status")
+    .optional()
+    .notEmpty(),
   validateErrors,
 ];
 

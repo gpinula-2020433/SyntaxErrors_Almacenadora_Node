@@ -53,14 +53,6 @@ export const existNameProduct = async(nameProduct)=>{
     }
 }
 
-export const existNameCategory = async(nameCategory)=>{
-    const alreadyNameCategory = await Category.findOne({nameCategory})
-    if(alreadyNameCategory){
-        console.error(`The Category | ${nameCategory} | already exists`)
-        throw new Error(`The Category | ${nameCategory} | already exists`)
-    }
-}
-
 // Validar que no exista el email del proveedor
 export const existEmailSupplier = async (email, user = {}) => {
     const supplier = await Supplier.findOne({ email });
@@ -88,3 +80,14 @@ export const productExists = async (productId) => {
         throw new Error('Product does not exist')
     }
 }
+
+export const existNameCategory = async (nameCategory) => {
+    const normalizedName = nameCategory.trim().toLowerCase()
+  
+    const existingCategory = await Category.findOne({ name: normalizedName })
+  
+    if (existingCategory) {
+      console.error(`The category ${normalizedName} already exists.`)
+      throw new Error(`The category ${normalizedName} already exists.`)
+    }
+  }

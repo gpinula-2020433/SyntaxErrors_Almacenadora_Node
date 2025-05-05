@@ -189,7 +189,7 @@ export const deleteCategory = async(req, res)=>{
             }
         )
         
-        //En dado caso no es el default, que se elimine y pase las publicaciones al default
+        //En dado caso no es el default, que se elimine y pase los productos al default
         let defaultCategory = await Category.findOne(
             {name: 'Default Category' }
         )

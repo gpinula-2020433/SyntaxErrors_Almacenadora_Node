@@ -12,8 +12,9 @@ const api = Router();
 
 api.get('/', [validateJwt], getAllC)
 api.post('/', [validateJwt], save)
+
 api.get('/:id', [validateJwt], getCategory)
-api.put('/:id', [validateJwt] , updateCategory)
+
 api.delete('/:id', [validateJwt] , deleteCategory)
 
 
